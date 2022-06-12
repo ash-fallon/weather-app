@@ -30,7 +30,7 @@ const TemperatureAndDetails = ({
         {/* Current weather effect */}
         <p>{details}</p>
       </div>
-      <div className='flex flex-row items-center justify-between text-white py-3 ml-12'>
+      <div className='flex md:flex-row flex-col items-center justify-between text-white py-3 space-y-6 md:ml-12'>
         {/* Weather icon */}
         <img src={iconUrlFromCode(icon)} alt='' className='w-20' />
         {/* Temperature */}
@@ -54,7 +54,7 @@ const TemperatureAndDetails = ({
           </div>
         </div>
       </div>
-      <div className='flex flex-row items-center justify-center space-x-2 text-white text-sm py-3'>
+      <div className='hidden md:flex md:flex-row items-center justify-center space-x-2 text-white text-sm py-3'>
         {/* Weather details - below temperature */}
         <UilSun />
         <p className='font-light'>

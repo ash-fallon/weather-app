@@ -32,14 +32,14 @@ const Inputs = ({ setQuery, units, setUnits }) => {
   };
 
   return (
-    <div className='flex flex-row justify-center my-6'>
+    <div className='flex md:flex-row justify-center my-6'>
       {/* Search bar input */}
-      <div className='flex flex-row w-3/4 items-center justify-center space-x-4'>
+      <div className='flex flex-row w-full md:w-3/4 items-center justify-center space-x-4'>
         <input
           value={city}
           onChange={e => setCity(e.target.value)}
           type='text'
-          placeholder='Search for cities...'
+          placeholder='Search...'
           className='text-xl font-white p-2 w-full shadow-xl capitalize rounded-sm focus:outline-none placeholder:lowercase'
         />
         {/* Search bar icons */}
@@ -54,7 +54,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
           onClick={locationClickHandler}
         />
       </div>
-      <div className='flex flex-row w-1/4 items-center justify-center'>
+      <div className='sm:flex flex-row hidden sm:w-48 md:w-1/4 items-center justify-center'>
         {/* Celsius / Farenheit toggle */}
         <button
           name='metric'
