@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import UilReact from '@iconscout/react-unicons/icons/uil-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
