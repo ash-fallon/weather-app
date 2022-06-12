@@ -15,7 +15,7 @@ const TemperatureAndDetails = () => {
         {/* Current weather effect */}
         <p>Clear</p>
       </div>
-      <div className='flex flex-row items-center justify-between text-white py-3'>
+      <div className='flex flex-row items-center justify-between text-white py-3 ml-12'>
         {/* Weather icon */}
         <img
           src='http://openweathermap.org/img/wn/01d@2x.png'
