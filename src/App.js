@@ -30,8 +30,8 @@ const App = () => {
         <Inputs />
         {weather && (
           <>
-            <TimeAndLocation />
-            <TemperatureAndDetails />
+            <TimeAndLocation weather={weather} />
+            <TemperatureAndDetails weather={weather} />
             <Forecast title='Hourly Forecast' />
             <Forecast title='Daily Forecast' />
           </>
