@@ -3,7 +3,7 @@ import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons';
 const Inputs = () => {
   return (
     <div className='flex flex-row justify-center my-6'>
-      {/* Search bar */}
+      {/* Search bar input */}
       <div className='flex flex-row w-3/4 items-center justify-center space-x-4'>
         <input
           type='text'
