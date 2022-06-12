@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import UilReact from '@iconscout/react-unicons/icons/uil-react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import TopButtons from './components/TopButtons';
 import Inputs from './components/Inputs';
@@ -9,13 +11,21 @@ import Forecast from './components/Forecast';
 import getFormattedWeatherData from './services/weatherService';
 
 const App = () => {
-  const [query, setQuery] = useState({ q: 'berlin' });
+  const [query, setQuery] = useState({ q: 'Berlin' });
   const [units, setUnits] = useState('metric');
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     const fetchWeather = async () => {
+      const message = query.q ? query.q : 'current location.';
+
+      toast.info('Fetching weather for ' + message);
+
       await getFormattedWeatherData({ ...query, units }).then(data => {
+        toast.success(
+          `Successfully fetched weather for ${data.name}, ${data.country}.`,
+        );
+
         setWeather(data);
       });
     };
@@ -49,6 +59,7 @@ const App = () => {
           </>
         )}
       </div>
+      <ToastContainer autoClose={3000} theme='colored' newestOnTop={true} />
     </>
   );
 };
