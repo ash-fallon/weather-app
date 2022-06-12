@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <>
-      <div className='w-full h-screen pt-4 bg-gradient-to-br from-blue-700 to-amber-700'>
+      <div className='w-full h-screen md:pt-4 bg-gradient-to-br from-blue-700 to-amber-700'>
         <div
           className={`w-screen md:mx-auto md:max-w-screen-md py-5 px-8 md:px-32 md:rounded-xl bg-gradient-to-br ${formatBackground()} h-fit shadow-lg shadow-gray-700`}
         >
