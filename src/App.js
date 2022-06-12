@@ -8,7 +8,6 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import getFormattedWeatherData from './services/weatherService';
-import BgVideo from './assets/bg.mp4';
 
 const App = () => {
   const [query, setQuery] = useState({ q: 'Berlin' });
