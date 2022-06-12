@@ -22,11 +22,17 @@ const Inputs = () => {
       </div>
       <div className='flex flex-row w-1/4 items-center justify-center'>
         {/* Celsius / Farenheit toggle */}
-        <button name='metric' className='text-xl text-white font-medium'>
+        <button
+          name='metric'
+          className='text-xl text-white font-medium transition ease-out hover:scale-125'
+        >
           °C
         </button>
         <p className='text-xl text-white font-light mx-1'>|</p>
-        <button name='imperial' className='text-xl text-white font-medium'>
+        <button
+          name='imperial'
+          className='text-xl text-white font-medium transition ease-out hover:scale-125'
+        >
           °F
         </button>
       </div>
