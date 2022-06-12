@@ -38,37 +38,30 @@ const App = () => {
 
     const threshold = units === 'metric' ? 20 : 60;
 
-    if (weather.temp <= threshold) return 'from-cyan-700 to-blue-700';
+    if (weather.temp <= threshold) return 'from-cyan-600 to-blue-700';
 
     return 'from-yellow-700 to-orange-700';
   };
 
   return (
     <>
-      <div className='w-full h-screen relative'>
-        <video
-          src={BgVideo}
-          autoPlay
-          loop
-          muted
-          className='w-full h-full object-cover'
-        ></video>
+      <div className='w-full h-screen pt-4 bg-gradient-to-br from-blue-700 to-amber-700'>
+        <div
+          className={`w-screen md:mx-auto md:max-w-screen-md py-5 px-8 md:px-32 md:rounded-xl bg-gradient-to-br ${formatBackground()} h-fit shadow-lg shadow-gray-700`}
+        >
+          <TopButtons setQuery={setQuery} />
+          <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
+          {weather && (
+            <>
+              <TimeAndLocation weather={weather} />
+              <TemperatureAndDetails weather={weather} />
+              <Forecast title='Hourly Forecast' items={weather.hourly} />
+              <Forecast title='Daily Forecast' items={weather.daily} />
+            </>
+          )}
+        </div>
+        <ToastContainer autoClose={3000} theme='colored' newestOnTop={true} />
       </div>
-      <div
-        className={`w-screen md:mx-auto md:max-w-screen-md py-5 px-8 md:px-32 md:rounded bg-gradient-to-br ${formatBackground()} h-fit shadow-xl shadow-gray-700 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] md:opacity-[0.95]`}
-      >
-        <TopButtons setQuery={setQuery} />
-        <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
-        {weather && (
-          <>
-            <TimeAndLocation weather={weather} />
-            <TemperatureAndDetails weather={weather} />
-            <Forecast title='Hourly Forecast' items={weather.hourly} />
-            <Forecast title='Daily Forecast' items={weather.daily} />
-          </>
-        )}
-      </div>
-      <ToastContainer autoClose={3000} theme='colored' newestOnTop={true} />
     </>
   );
 };
