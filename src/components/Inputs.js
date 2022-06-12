@@ -6,7 +6,16 @@ const Inputs = () => {
       <div className='flex flex-row w-3/4 items-center justify-center space-x-4'>
         <input
           type='text'
-          className='text-xl font-white py-2 px-5 w-full shadow-xl capitalize rounded-full focus:outline-none'
+          placeholder='Search for cities...'
+          className='text-xl font-white p-2 w-full shadow-xl capitalize rounded-sm focus:outline-none placeholder:lowercase'
+        />
+        <UilSearch
+          size={25}
+          className='text-white cursor-pointer transition ease-out hover:scale-125'
+        />
+        <UilLocationPoint
+          size={25}
+          className='text-white cursor-pointer transition ease-out hover:scale-125'
         />
       </div>
     </div>
