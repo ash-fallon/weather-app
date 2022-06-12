@@ -8,6 +8,7 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import getFormattedWeatherData from './services/weatherService';
+import BgVideo from './assets/bg.mp4';
 
 const App = () => {
   const [query, setQuery] = useState({ q: 'Berlin' });
@@ -44,8 +45,17 @@ const App = () => {
 
   return (
     <>
+      <div className='w-full h-screen relative'>
+        <video
+          src={BgVideo}
+          autoPlay
+          loop
+          muted
+          className='w-full h-full object-cover'
+        ></video>
+      </div>
       <div
-        className={`w-screen md:mx-auto md:max-w-screen-md md:mt-4 py-5 px-8 md:px-32 md:rounded bg-gradient-to-br ${formatBackground()} h-fit shadow-xl shadow-gray-400`}
+        className={`w-screen md:mx-auto md:max-w-screen-md py-5 px-8 md:px-32 md:rounded bg-gradient-to-br ${formatBackground()} h-fit shadow-xl shadow-gray-700 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] md:opacity-[0.95]`}
       >
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
