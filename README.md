@@ -175,7 +175,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Ash Fallon - ash@ashfallon.com
 
-Project Link: [https://github.com/ash-fallon/asset-display-panel](https://github.com/ash-fallon/weather-app)
+Project Link: [https://github.com/ash-fallon/weather-app](https://github.com/ash-fallon/weather-app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
