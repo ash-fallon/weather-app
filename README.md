@@ -5,14 +5,14 @@
   <p align="center">
     A weather app capable of displaying historic weather data, calculating Celsius/Fahrenheit conversion, tracking wind, humidity, sunrise and sunset and tracking the users location.
     <br />
-    <a href="https://github.com/ash-fallon/asset-display-panel"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ash-fallon/weather-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://ashfallon-asset-display-panel.netlify.app/">View Demo</a>
+    <a href="https://ashfallon-weather-app.netlify.app/">View Demo</a>
     ·
-    <a href="https://github.com/ash-fallon/asset-display-panel/issues">Report Bug</a>
+    <a href="https://github.com/ash-fallon/weather-app/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ash-fallon/asset-display-panel/issues">Request Feature</a>
+    <a href="https://github.com/ash-fallon/weather-app/issues">Request Feature</a>
   </p>
 </div>
 
@@ -127,7 +127,7 @@ If you get a version returned on either or both, you have it installed and can m
 
 ![Weather App Screen Shot](src/img/location.png)
 
-For more examples, please refer to the [Documentation](https://github.com/ash-fallon/asset-display-panel)
+For more examples, please refer to the [Documentation](https://github.com/ash-fallon/weather-app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
